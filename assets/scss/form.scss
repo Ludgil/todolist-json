@@ -1,0 +1,60 @@
+$raleway : 'Raleway';
+$cursive : 'Indie FLower';
+
+body{
+    margin: 0 auto;
+    background: #FFFFA5 url('../img/paper-fibers.png');
+    #container{
+        width: 900px;
+        height: 100vh;
+        margin-left:auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+}
+
+header{
+
+    text-align:center;
+    
+    #title{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+        h1{
+            font-family: $raleway, sans-serif;
+            font-weight: bold;
+            font-size: 7rem;
+            margin: 20px 0 20px 0;
+        }
+
+    }
+    h2{
+        font-family: $cursive, cursive;
+        font-size: 5rem;
+        margin: 0;
+    }
+}
+
+#todo-area{
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                margin-top:20px;
+                list-style: none;
+            }
+        }
+}
+
+#archive-area{
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                margin-top:20px;
+                list-style: none;
+            }
+    }
+}

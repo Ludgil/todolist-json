@@ -1,0 +1,66 @@
+body {
+  margin: 0 auto;
+  background: #FFFFA5 url("../img/paper-fibers.png");
+}
+
+body #container {
+  width: 900px;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+}
+
+header #title {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+header #title h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 7rem;
+  margin: 20px 0 20px 0;
+}
+
+header h2 {
+  font-family: "Indie FLower", cursive;
+  font-size: 5rem;
+  margin: 0;
+}
+
+#todo-area ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#todo-area ul li {
+  margin-top: 20px;
+  list-style: none;
+}
+
+#archive-area ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#archive-area ul li {
+  margin-top: 20px;
+  list-style: none;
+}
+/*# sourceMappingURL=form.css.map */
