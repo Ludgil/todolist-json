@@ -23,21 +23,20 @@
         <section id="todo">
             <h3>To Do</h3>
             <div id="todo-area">
+                <form action="formulaire.php" method="post">
                 <!-- zone to do  -->
                 <ul>
-                    <?php add_task($url); ?>
+                    <?php add_task($url);?>
                 </ul>
-                
-            </div>
             <!-- bouton valider un todo -->
-            <form action="contenu.php" method="post">
-                <input type="submit" name="done" value="Done"/>
-            </form>
+                <input type="submit" name="submit" value="Done"/>
+                </form>
+            </div>
             <h3>Archive</h3> 
             <div id="archive-area">
                 <!-- zone archive -->
                 <ul>
-                   
+                    <?php add_archive($url);?>
                 </ul>
             </div>
         </section>
@@ -49,9 +48,6 @@
                 <input type="submit" name="submit" value="Add"/>
             </form>
         </section>
-        
-
-
     </div>
 </body>
 </html>

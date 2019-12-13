@@ -1,5 +1,8 @@
 <?php
+
 $url="data.json";
+$error="";
+
 function add_task($jsonfile){
     $getcontent=file_get_contents($jsonfile);
     $getcontent=json_decode($getcontent,true);
@@ -7,44 +10,47 @@ function add_task($jsonfile){
         echo "<li>bouge ton cul fainiasse</li>";
     }else{
         foreach($getcontent as $key => $value){
-            echo "<li><input type='checkbox' name='check' value=" . $value['task'] . " id=" . $value['task'] ."> <label for=" . $value['task'] .">".$value['task']."</label></li>";
+            if($value['archive']==false){
+            echo "<li><input type='checkbox' name='check[]' value='".$value['task']."' id='".$value['task']."'> <label for=" 
+            . $value['task'] .">".$value['task']."</label></li>";
+            }
         }
     }
 }
 
-
-echo $_POST['done'];
-
-function archive_task($jsonfile){
-
-
-}
-
-?>
-
-
-
-
-
-
-
-
-<!-- First, you need to decode it :
-
-$jsonString = file_get_contents('jsonFile.json');
-$data = json_decode($jsonString, true);
-
-Then change the data :
-
-$data[0]['activity_name'] = "TENNIS";
-// or if you want to change all entries with activity_code "1"
-foreach ($data as $key => $entry) {
-    if ($entry['activity_code'] == '1') {
-        $data[$key]['activity_name'] = "TENNIS";
+function add_archive($url){
+    $getcontent=file_get_contents($url);
+    $getcontent=json_decode($getcontent,true);
+    foreach($getcontent as $key => $value){
+        if($value['archive']==true){
+            echo "<li>".$value['task']."</li>";  
+        }
     }
 }
 
-Then re-encode it and save it back in the file:
+// function archive_task($jsonfile){
+//     $check=$data;
+//     $getcontent=file_get_contents($jsonfile);
+//     $getcontent=json_decode($getcontent,true);
+//     for ($init = 0; $init < count($getcontent); $init ++){        
+//         if (in_array($getcontent[$init]['task'], $check)){                                           
+//           $getcontent[$init]['archive'] = true;                
+//         }
+//     }
+//     $getcontent=json_encode($getcontent,JSON_PRETTY_PRINT);
+//     file_put_contents($url,$getcontent);
+//     put_on_archive($jsonfile);
+//     header('Location:index.php');
+// }
 
-$newJsonString = json_encode($data);
-file_put_contents('jsonFile.json', $newJsonString); -->
+// function put_on_archive($jsonfile){
+//     $getcontent=file_get_contents($jsonfile);
+//     $getcontent=json_decode($getcontent,true);
+//    foreach($getcontent as $key => $value)
+//         if($value['archive']==true){
+//             echo "<li>".$value['task']."</li>"; 
+//         }
+// } 
+
+    ?>
+

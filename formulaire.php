@@ -1,6 +1,10 @@
 <?php 
 
+include("contenu.php");
+
 $url='data.json';
+
+// function for check illegal character
 
 function checkInput($str){
     $illegal = "#$%^&*()+=[];/\{}|<>?~";
@@ -16,6 +20,8 @@ function checkInput($str){
     }
 }
 
+
+// fonction pour créer un tableau de donnée a envoyer en json
 function create_array($data){
     $arr=array();
     $arr['task']=$data;
@@ -31,6 +37,7 @@ if (isset($_POST['to_do'])){
        echo $get_error="le champ est vide";
     }
 }
+
 
 if(!empty($Todo)){
     $for_json=checkInput($Todo); 
@@ -52,6 +59,27 @@ if(file_get_contents($url)==null){
     $json=json_encode($json,JSON_PRETTY_PRINT);
     file_put_contents($url,$json);
 }
+
+
+    if(!empty($_POST['check'])) {
+        foreach($_POST['check'] as $selected) {
+            $checked[]=$selected;
+        }
+        $getcontent=file_get_contents($url);
+        $getcontent=json_decode($getcontent,true);
+        for ($i = 0; $i < count($getcontent); $i ++){ 
+            if (in_array($getcontent[$i]['task'], $checked)){                                           
+                $getcontent[$i]['archive'] = true;                
+            }      
+        }
+        $getcontent=json_encode($getcontent,JSON_PRETTY_PRINT);
+        file_put_contents($url,$getcontent);
+        add_archive($url);
+    }else{
+        $error="aucun champ n'a été cocher";
+        echo $error;
+    }
+ 
 
 header('Location:index.php');
 ?>
