@@ -11,7 +11,7 @@
     <title>TO-DO LIST</title>
 </head>
 <body>
-<?php include("contenu.php"); ?>  <!-- import fonction -->
+<?php include("contenu.php");?>  <!-- import fonction -->
     <div id="container">
         <header>
             <div id="title">
@@ -29,7 +29,7 @@
                     <?php add_task($url);?>
                 </ul>
             <!-- bouton valider un todo -->
-                <input type="submit" name="submit" value="Done"/>
+                <input type="submit" name="submit-check" value="Done"/>
                 </form>
             </div>
             <h3>Archive</h3> 

@@ -21,36 +21,16 @@ function add_task($jsonfile){
 function add_archive($url){
     $getcontent=file_get_contents($url);
     $getcontent=json_decode($getcontent,true);
-    foreach($getcontent as $key => $value){
-        if($value['archive']==true){
-            echo "<li>".$value['task']."</li>";  
+    if($getcontent==null){
+        echo "<p>aucune archive</p>";
+    }else{
+        foreach($getcontent as $key => $value){
+            if($value['archive']==true){
+                echo "<li>".$value['task']."</li>";  
+            }
         }
-    }
+    }   
 }
-
-// function archive_task($jsonfile){
-//     $check=$data;
-//     $getcontent=file_get_contents($jsonfile);
-//     $getcontent=json_decode($getcontent,true);
-//     for ($init = 0; $init < count($getcontent); $init ++){        
-//         if (in_array($getcontent[$init]['task'], $check)){                                           
-//           $getcontent[$init]['archive'] = true;                
-//         }
-//     }
-//     $getcontent=json_encode($getcontent,JSON_PRETTY_PRINT);
-//     file_put_contents($url,$getcontent);
-//     put_on_archive($jsonfile);
-//     header('Location:index.php');
-// }
-
-// function put_on_archive($jsonfile){
-//     $getcontent=file_get_contents($jsonfile);
-//     $getcontent=json_decode($getcontent,true);
-//    foreach($getcontent as $key => $value)
-//         if($value['archive']==true){
-//             echo "<li>".$value['task']."</li>"; 
-//         }
-// } 
 
     ?>
 
