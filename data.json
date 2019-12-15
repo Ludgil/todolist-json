@@ -13,6 +13,22 @@
     },
     {
         "task": "cxwvv",
+        "archive": true
+    },
+    {
+        "task": "fdssfd",
+        "archive": true
+    },
+    {
+        "task": "vdgds",
+        "archive": false
+    },
+    {
+        "task": "dsd",
+        "archive": false
+    },
+    {
+        "task": "fdgsd",
         "archive": false
     }
 ]

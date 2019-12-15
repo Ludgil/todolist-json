@@ -44,6 +44,7 @@ header{
             li{
                 margin-top:20px;
                 list-style: none;
+                font-family: $cursive, cursive;
             }
         }
 }
@@ -55,6 +56,8 @@ header{
             li{
                 margin-top:20px;
                 list-style: none;
+                text-decoration: line-through;
+                font-family: $cursive, cursive;
             }
     }
 }

@@ -46,6 +46,7 @@ header h2 {
 #todo-area ul li {
   margin-top: 20px;
   list-style: none;
+  font-family: "Indie FLower", cursive;
 }
 
 #archive-area ul {
@@ -61,5 +62,7 @@ header h2 {
 #archive-area ul li {
   margin-top: 20px;
   list-style: none;
+  text-decoration: line-through;
+  font-family: "Indie FLower", cursive;
 }
 /*# sourceMappingURL=form.css.map */

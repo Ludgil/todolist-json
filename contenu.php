@@ -11,10 +11,10 @@ function add_task($jsonfile){
     }else{
         foreach($getcontent as $key => $value){
             if($value['archive']==false){
-            echo "<li><input type='checkbox' name='check[]' value='".$value['task']."' id='".$value['task']."'> <label for=" 
+            echo "<li><input type='checkbox' name='check[]' value='".$value['task']."' class='check-done'> <label for=" 
             . $value['task'] .">".$value['task']."</label></li>";
             }
-        }
+        }//".$value['task']."
     }
 }
 

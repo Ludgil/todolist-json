@@ -29,7 +29,7 @@
                     <?php add_task($url);?>
                 </ul>
             <!-- bouton valider un todo -->
-                <input type="submit" name="submit-check" value="Done"/>
+                <input type="submit" id="done" name="submit-check" value="Done"/>
                 </form>
             </div>
             <h3>Archive</h3> 
@@ -49,5 +49,6 @@
             </form>
         </section>
     </div>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
