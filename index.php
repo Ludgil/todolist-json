@@ -42,7 +42,7 @@
         </section>
         <section id="add-area">
 
-            <h3>Add something to do (you fat ass)</h3>
+            <h3>Add something to do</h3>
             <form action="formulaire.php" method="post">
                 <input type="text" name="to_do">
                 <input type="submit" name="submit" value="Add"/>

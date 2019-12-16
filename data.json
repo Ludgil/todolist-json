@@ -1,11 +1,11 @@
 [
     {
         "task": "on va teste",
-        "archive": true
+        "archive": false
     },
     {
         "task": "dsv",
-        "archive": true
+        "archive": false
     },
     {
         "task": "fdgsdg",
@@ -13,22 +13,10 @@
     },
     {
         "task": "cxwvv",
-        "archive": true
-    },
-    {
-        "task": "fdssfd",
-        "archive": true
-    },
-    {
-        "task": "vdgds",
         "archive": false
     },
     {
-        "task": "dsd",
-        "archive": false
-    },
-    {
-        "task": "fdgsd",
+        "task": "dfqf",
         "archive": false
     }
 ]

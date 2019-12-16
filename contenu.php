@@ -7,7 +7,7 @@ function add_task($jsonfile){
     $getcontent=file_get_contents($jsonfile);
     $getcontent=json_decode($getcontent,true);
     if($getcontent==null){
-        echo "<li>bouge ton cul fainiasse</li>";
+        echo "<li>fait un truc ?</li>";
     }else{
         foreach($getcontent as $key => $value){
             if($value['archive']==false){
